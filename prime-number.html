@@ -1,0 +1,27 @@
+<html> 
+<head> 
+<title>Prime Algorithm</title> 
+</head> 
+<body>
+
+
+<script> 
+
+const result = (input) =>  {
+  let temp = [], prime = [];
+  for (let i=2; i<=input; i++) {
+    if (!temp[i]) {
+      prime.push(i);
+      for (let j=i; j<=input; j+=i) { 
+        temp[j] = true;
+      }
+    }
+  }
+  return prime;
+}
+
+console.log(result(11)); 
+
+</script> 
+</body> 
+</html> 
